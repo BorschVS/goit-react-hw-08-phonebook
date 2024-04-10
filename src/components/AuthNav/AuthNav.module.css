@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.nav a {
+  display: inline-flex;
+  padding: 16px 16px;
+  color: #ddd;
+
+  align-self: center;
+
+  background-color: #5ca2fd;
+
+  border-radius: 4px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.nav a:hover {
+  background-color: rgb(55, 155, 236);
+}
+
+.nav a:active {
+  background-color: rgb(17, 79, 131);
+}
