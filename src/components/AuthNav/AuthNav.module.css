@@ -10,6 +10,8 @@
 
   align-self: center;
 
+  color: var(--primary-green);
+
   border-radius: 30px;
   transition: background-color 250ms ease-in-out;
 }
