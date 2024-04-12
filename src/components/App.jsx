@@ -7,7 +7,6 @@ import { PrivateRoute } from '../routes/PrivateRoute';
 import { Layout } from 'components/Layout/Layout';
 
 import { refreshUser } from '../redux/auth/operations';
-import { useAuth } from 'hooks/useAuth';
 
 const Home = lazy(() => import('../pages/Home'));
 const Contacts = lazy(() => import('../pages/Contacts'));
@@ -16,16 +15,13 @@ const SignIn = lazy(() => import('../pages/SignIn'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
 
   useEffect(() => {
     // refresh всему голова
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    <b>Refreshing</b>
-  ) : (
+  return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />

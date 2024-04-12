@@ -10,13 +10,13 @@ export const NavBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <AppBar position="static" component="header" className={css.header}>
-      <div className={css.container}>
+    <header className={css.header}>
+      <div className="container">
         <div className={css.nav}>
           <Navigation />
           {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </div>
       </div>
-    </AppBar>
+    </header>
   );
 };

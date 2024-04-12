@@ -1,24 +1,27 @@
 .wrapper {
   display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
   align-items: center;
   gap: 20px;
 }
 
-.nav a {
-  display: inline-flex;
-  padding: 8px 16px;
-  color: #ddd;
+.button {
+  background-color: transparent;
+  font-size: 32px;
+  color: var(--primary-green);
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
 
-  background-color: #346fbb;
-
-  border-radius: 4px;
-  transition: background-color 250ms ease-in-out;
+  text-transform: uppercase;
 }
 
-.nav a:hover {
-  background-color: rgb(55, 155, 236);
+.button:hover {
+  color: var(--transparent-green);
 }
 
-.nav a:active {
-  background-color: rgb(17, 79, 131);
+.button:active {
+  background-color: transparent;
+  color: var(--primary-green);
 }

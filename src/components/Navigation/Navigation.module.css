@@ -5,19 +5,7 @@
   gap: 20px;
 }
 
-.nav a {
-  padding: 16px 16px;
-  color: #ddd;
-  background-color: #599af0;
-
-  border-radius: 4px;
-  transition: background-color 250ms ease-in-out;
-}
-
-.nav a:hover {
-  background-color: rgb(55, 155, 236);
-}
-
-.nav a:active {
-  background-color: rgb(17, 79, 131);
+.navList {
+  display: flex;
+  gap: 14px;
 }

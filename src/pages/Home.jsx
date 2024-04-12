@@ -2,9 +2,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import { useAuth } from 'hooks/useAuth';
 import { Helmet } from 'react-helmet';
 
 const Home = () => {
+  const { user } = useAuth();
+
   return (
     <>
       <Helmet>
@@ -16,13 +19,8 @@ const Home = () => {
         flexDirection="column"
         alignItems="center"
       >
-        <Typography
-          variant="h1"
-          component="h1"
-          fontSize="60px"
-          color="rgb(190, 208, 255)"
-        >
-          With Contacts no limits!
+        <Typography variant="h1" component="h1" fontSize="60px" color="#04F22A">
+          Welcome, {user.name}!
         </Typography>
       </Box>
     </>

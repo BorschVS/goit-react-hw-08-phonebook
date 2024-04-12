@@ -5,8 +5,6 @@ import { RotatingLines } from 'react-loader-spinner';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavBar } from '../NavBar/NavBar';
-
-import css from './Layout.module.css';
 import { Box } from '@mui/material';
 
 export const Layout = () => {
@@ -21,7 +19,7 @@ export const Layout = () => {
             flexDirection="column"
             alignItems="center"
           >
-            <RotatingLines width="4rem" strokeColor="rgb(190, 208, 255)" />
+            <RotatingLines width="4rem" strokeColor="#04F22A" />
           </Box>
         }
       >

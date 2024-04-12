@@ -4,14 +4,15 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from '../redux/contacts/operations';
-import { selectIsLoading } from '../redux/contacts/selectors';
 
 // UI
 import Box from '@mui/material/Box';
+import { Grid } from '@mui/material';
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+  const contacts = useSelector(state => state.contacts.items);
+  const contactsExist = contacts.length > 0;
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -22,15 +23,17 @@ const Contacts = () => {
       <Helmet>
         <title>Contacts</title>
       </Helmet>
-      <Box
-        component="section"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <ContactForm />
-        <div>{isLoading && 'Loading...'}</div>
-        <ContactList />
+      <Box component="section" display="flex" flexDirection="column">
+        <div className="container">
+          <Grid container spacing={2}>
+            <Grid item xs={4} md={4}>
+              <ContactForm />
+            </Grid>
+            <Grid item xs={4} md={8}>
+              {contactsExist && <ContactList />}
+            </Grid>
+          </Grid>
+        </div>
       </Box>
     </>
   );

@@ -5,8 +5,8 @@ import { selectContacts } from '../../redux/contacts/selectors';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
-import Button from '@mui/material/Button';
-import { TextField } from '@mui/material';
+
+import { IoMdPersonAdd } from 'react-icons/io';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -32,34 +32,36 @@ export const ContactForm = () => {
 
     !contactExists(form.name) && setForm({});
   }
-
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <TextField
-        label="Name"
-        variant="outlined"
-        size="small"
-        type="text"
-        name="name"
-        value={form.name || ''}
-        onChange={handleChange}
-        required
-      />
+      <label className={css.label}>
+        <input
+          className={css.input}
+          type="text"
+          name="name"
+          value={form.name || ''}
+          onChange={handleChange}
+          required
+          placeholder="NAME"
+        />
+      </label>
 
-      <TextField
-        label="Number"
-        variant="outlined"
-        size="small"
-        type="tel"
-        name="number"
-        value={form.number || ''}
-        onChange={handleChange}
-        required
-      />
+      <label className={css.label}>
+        <input
+          className={css.input}
+          type="tel"
+          name="number"
+          value={form.number || ''}
+          onChange={handleChange}
+          required
+          placeholder="NUMBER"
+        />
+      </label>
 
-      <Button type="submit" variant="contained">
-        Add contact
-      </Button>
+      <button type="submit" className={css.button}>
+        <span>Add contact</span>
+        <IoMdPersonAdd />
+      </button>
     </form>
   );
 };

@@ -1,38 +1,58 @@
-.ContactList__item {
+.listItem {
   position: relative;
   display: flex;
-  gap: 40px;
-  max-width: 500px;
   justify-content: space-between;
-  align-content: center;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
+  max-width: 400px;
+  border-bottom: 1px solid var(--primary-green);
+  border-bottom-right-radius: 12px;
+
+  margin-bottom: 8px;
 }
 
-.ContactList__item p.text {
+.text {
   margin-right: 10px;
   overflow: hidden;
 }
 
-.ContactList__item a.number {
-  flex-grow: 1;
-  text-align: right;
-  margin-right: 10px;
+.number {
+  display: flex;
+  gap: 6px;
+
   text-decoration: none;
-  color: #333;
+  color: var(--primary-green);
 }
 
-.Delete__button {
-  background-color: #e74c3c;
-  color: white;
+.deleteButton {
+  background-color: transparent;
+  color: var(--primary-green);
   border: none;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.Delete__button:hover {
-  background-color: #c0392b;
+.deleteButton:hover {
+  color: var(--primary-black);
+  background-color: var(--primary-green);
+}
+
+.deleteButton:active {
+  background-color: var(--transparent-green);
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 6px;
 }

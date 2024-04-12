@@ -9,8 +9,8 @@ export const ContactList = () => {
   return (
     contacts.length > 0 && (
       <ul className={css.contactList}>
-        {contacts.map(({ id, name, phone }) => {
-          return <ContactItem key={id} id={id} name={name} phone={phone} />;
+        {contacts.map(({ id, name, number }) => {
+          return <ContactItem key={id} id={id} name={name} number={number} />;
         })}
       </ul>
     )
