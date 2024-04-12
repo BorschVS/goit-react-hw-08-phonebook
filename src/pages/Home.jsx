@@ -19,9 +19,16 @@ const Home = () => {
         flexDirection="column"
         alignItems="center"
       >
-        <Typography variant="h1" component="h1" fontSize="60px" color="#04F22A">
-          Welcome, {user.name}!
-        </Typography>
+        {user?.name && (
+          <Typography
+            variant="h1"
+            component="h1"
+            fontSize="60px"
+            color="#04F22A"
+          >
+            Welcome, {user.name}!
+          </Typography>
+        )}
       </Box>
     </>
   );

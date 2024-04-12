@@ -3,7 +3,6 @@ import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from 'hooks/useAuth';
 
-import { AppBar } from '@mui/material';
 import css from './NavBar.module.css';
 
 export const NavBar = () => {
