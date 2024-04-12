@@ -1,7 +1,7 @@
 @import-normalize;
 
 :root {
-  --primary-green: #04F22A;
+  --primary-green: #04f22a;
   --transparent-green: #04f22ca3;
   --primary-black: #151515;
 
@@ -51,6 +51,7 @@ p {
 }
 
 a {
+  color: var(--primary-green);
   text-decoration: none;
 }
 
