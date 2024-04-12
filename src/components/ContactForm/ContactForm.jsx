@@ -25,7 +25,7 @@ export const ContactForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (form.name.trim() === '') console.log('asdasd');
+    if (form.name.trim() === '');
     contactExists(form.name)
       ? toast.error(`${form.name} is already in contacts`)
       : dispatch(addContact(form));
